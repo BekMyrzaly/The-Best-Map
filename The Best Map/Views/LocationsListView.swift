@@ -21,7 +21,6 @@ struct LocationsListView: View {
                 }
                 .padding(.vertical, 4)
                 .listRowBackground(Color.clear)
-
             }
         }
         .listStyle(PlainListStyle())
@@ -31,6 +30,7 @@ struct LocationsListView: View {
 struct LocationsListView_Previews: PreviewProvider {
     static var previews: some View {
         LocationsListView()
+            .environmentObject(LocationsViewModel())
     }
 }
 
@@ -46,13 +46,13 @@ extension LocationsListView {
                         .cornerRadius(10)
                 }
                 
-                VStack {
+                VStack(alignment: .leading) {
                     Text(location.name)
                         .font(.headline)
                     Text(location.cityName)
                         .font(.subheadline)
                 }
-                .frame(maxWidth: nil, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
     }
 }

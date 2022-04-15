@@ -43,11 +43,11 @@ extension LocationsView {
     private var header: some View {
         VStack {
             Button(action: vm.toggleLocationsList) {
-                Text(vm.mapLocation.name + ", " + vm.mapLocation.cityName)
-                    .font(.title2)
+                Text(vm.mapLocation.name)
+                    .font(.subheadline)
                     .fontWeight(.black)
                     .foregroundColor(.primary)
-                    .frame(height: 80)
+                    .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .animation(.none, value: vm.mapLocation)
                     .overlay(alignment: .leading) {
