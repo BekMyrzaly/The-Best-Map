@@ -185,7 +185,7 @@ class LocationsDataService {
         Location(
             name: "Мавзолей Тектурмас",
             cityName: "Тараз",
-            coordinates: CLLocationCoordinate2D(latitude: 51.12581331502446, longitude: 71.46567972697619),
+            coordinates: CLLocationCoordinate2D(latitude: 51.12581331502446, longitude: 71.400000),
             description: "Мавзолей Тектурмас — памятник архитектуры XIV—XV века, расположенный на юго-восточной окраине города Тараза на правом берегу реки Талас на вершине холма Тектурмас. Зодчий и строитель мавзолея неизвестны. Среди местных жителей мавзолей считается местом захоронения святого Султан-Махмуд-хана",
             imageNames: [
                 "tek1",
