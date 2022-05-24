@@ -50,12 +50,14 @@ class LocationsViewModel: ObservableObject {
         }
     }
     
+    //Анимация перхода к местоположению
      func toggleLocationsList() {
         withAnimation(.easeInOut) {
             showLocationsList = !showLocationsList
         }
     }
     
+    //Анимация показа след. местоположения
     func showNextLocation(location: Location) {
         withAnimation(.easeInOut) {
             mapLocation = location
