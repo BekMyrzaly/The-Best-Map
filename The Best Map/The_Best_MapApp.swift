@@ -14,7 +14,9 @@ struct The_Best_MapApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LocationsView().environmentObject(vm)
+            UserProfile()
+//            LocationsView().environmentObject(vm)
+            
         }
     }
 }

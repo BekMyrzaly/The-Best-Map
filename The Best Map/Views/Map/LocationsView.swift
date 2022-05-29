@@ -7,11 +7,15 @@
 
 import SwiftUI
 import MapKit
+import SDWebImageSwiftUI
 
 struct LocationsView: View {
     
     @EnvironmentObject private var vm: LocationsViewModel
     let maxWidthForIpad: CGFloat = 700
+  
+    @State var isPresented = false
+    @State var showListLocation = false
     
     var body: some View {
         ZStack {
@@ -22,7 +26,6 @@ struct LocationsView: View {
                     .frame(maxWidth: maxWidthForIpad)
                 Spacer()
                 locationsPreviewStack
-                
             }
         }
         .sheet(item: $vm.sheetLocation, onDismiss: nil) { location  in
@@ -42,6 +45,8 @@ extension LocationsView {
     
     private var header: some View {
         VStack {
+            
+            
             Button(action: vm.toggleLocationsList) {
                 Text(vm.mapLocation.name)
                     .font(.subheadline)
@@ -50,13 +55,31 @@ extension LocationsView {
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .animation(.none, value: vm.mapLocation)
-                    .overlay(alignment: .leading) {
+                    .overlay(alignment: .trailing) {
                         Image(systemName: "arrow.down")
                         .font(.headline)
                         .foregroundColor(.primary)
                         .padding()
                         .rotationEffect(Angle(degrees: vm.showLocationsList ? 180 : 0))
                 }
+                    .overlay(alignment: .leading) {
+                        
+                        Button (
+                            action: { self.isPresented = true },
+                            label: {
+                                Label("", systemImage: "person.crop.circle")
+                                    .fullScreenCover(isPresented: $showListLocation) {
+                                        UserProfile()
+                                    }
+                            })
+                        .font(.largeTitle)
+                        .foregroundColor(.primary)
+                        .padding()
+                        .sheet(isPresented: $isPresented, content: {
+                            UserProfile()
+                        })
+                            
+                    }
             }
         
             if vm.showLocationsList {

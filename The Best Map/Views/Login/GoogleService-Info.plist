@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>984282718086-s9e8uvc1dqrit53f35f7s0ilted7ihbr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.984282718086-s9e8uvc1dqrit53f35f7s0ilted7ihbr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBd1jyJsyHYEw-cGzPzN2PlLslpHwb0im8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>984282718086</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>M.B.P..The-Best-Map</string>
+	<key>PROJECT_ID</key>
+	<string>the-best-map-6d74c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>the-best-map-6d74c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:984282718086:ios:e5ce79e3cd226b1fcbd607</string>
+</dict>
+</plist>
